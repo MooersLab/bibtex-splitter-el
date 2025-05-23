@@ -2,15 +2,16 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 # bibtex-splitter-el
 
-Status: Currently broken. Come back later.
+## Status: Currently broken. Come back later!
 
 This Elisp script parses a large BibTeX file into smaller chunks of 700 entries each:
 
-* BibTeX File Splitter for Claude Upload
+ 
+## BibTeX File Splitter for Claude Upload
 
-** Usage Instructions
+## Usage Instructions
 
-*** Basic Usage
+### Basic Usage
 To split your BibTeX file, load the script and run:
 ```elisp
 (load "path/to/bibtex-splitter.el")
@@ -20,12 +21,12 @@ To split your BibTeX file, load the script and run:
 Or interactively:
 - `M-x bibtex-split-for-claude`  and provide the file path
 
-*** Key Functions
+### Key Functions
 
-**** `bibtex-split-for-claude`
+### `bibtex-split-for-claude`
 The main interactive function that splits your BibTeX file into 700-entry chunks, creating files named =your-file-part-1.bib=, =your-file-part-2.bib=, etc.
 
-**** `bibtex-splitter-count-entries`
+###`bibtex-splitter-count-entries`
 Counts entries in your BibTeX file before splitting:
 
 
@@ -39,23 +40,24 @@ Validates BibTeX structure and reports any parsing errors:
 (bibtex-splitter-validate-file "bibliography.bib")
 ```
 
-** Features
+## Features
 
-*** Robust Parsing
+### Robust Parsing
 - Uses Emacs' built-in =bibtex-mode= functions for reliable entry detection
 - Handles malformed entries gracefully with error reporting
 - Preserves complete entry structure including formatting
 
-*** Customizable Chunk Size
+### Customizable Chunk Size
 If you need different chunk sizes, modify =bibtex-splitter-entries-per-file= or call the underlying function directly:
 ```elisp
 (bibtex-splitter-split-file "bibliography.bib" 500)  ; 500 entries per file
 ```
 
-*** Error Handling
+### Error Handling
 The validation function helps identify problematic entries before splitting, so you can clean up your BibTeX file if needed.
 
-** Installation in Your Emacs Config
+
+## Installation in Your Emacs Config
 
 Add to your =init.el= or create a separate file in your Emacs configuration:
 ```elisp
