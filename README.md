@@ -2,7 +2,9 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 # bibtex-splitter-el
 
-Here's an Elisp script that will parse a large BibTeX file into smaller chunks of 700 entries each:
+Status: Currently broken. Come back later.
+
+This Elisp script parses a large BibTeX file into smaller chunks of 700 entries each:
 
 * BibTeX File Splitter for Claude Upload
 
